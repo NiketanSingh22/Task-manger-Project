@@ -1,0 +1,138 @@
+@keyframes slideinLeft {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #9d3535;
+    opacity: 0.7;
+    background: transparent;
+    color: rgb(32, 32, 250);
+    font-size: larger;
+}
+
+.tasks {
+    background-color: rgba(98, 74, 90, 0.55);
+    padding: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task span {
+    color: black;
+}
+
+.deletebtn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.deletebtn:hover {
+    background-color: red;
+    color: wheat;
+}
+
+.btn {
+    font-size: larger;
+    transition: all 1s ease-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: #9d3535;
+    color: #fff;
+}
+
+h1 {
+    opacity: 0.99;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: chocolate;
+    animation-name: slideinLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    transform: translateY(100px);
+}
+
+::placeholder {
+    color: #0f9750b3;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    input, textarea, button {
+        width: 100%;
+    }
+
+    .task {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .deletebtn {
+        width: 100%;
+    }
+}
